@@ -1,0 +1,52 @@
+mkdir test
+cd test
+mkdir animal
+cd animal
+mkdir fox
+cd fox
+touch says.txt
+cd ..
+touch cat.txt dog.txt
+echo "kutya" > dog.txt
+cat dog.txt
+mkdir goat goat/remix
+cd goat
+touch jokes.txt
+echo "viccek" > jokes.txt
+cat jokes.txt
+cd remix
+touch skrillex.txt
+echo "mixek" > skrillex.txt
+cat skrillex.txt
+cd ..
+cd ..
+cat dog.txt > cat.txt
+echo -en "\n" >> cat.txt
+cat goat/remix/skrillex.txt >> cat.txt
+cat cat.txt
+cd fox
+cat ../goat/jokes.txt > says.txt
+echo -en '\n' >> says.txt
+cat ../cat.txt >> says.txt
+cat says.txt
+chmod 444 says.txt
+ls -l
+cd ..
+chmod 644 fox
+ls -l
+chmod 644 dog.txt
+chmod 600 cat.txt
+ls -l
+cd goat
+chmod 600 jokes.txt
+cd remix
+chmod 663 skrillex.txt
+ls -l
+cd ..
+chmod 700 remix
+cd ..
+chmod 644 goat
+ls -l
+cd ..
+chmod 755 animal
+ls -l
