@@ -20,10 +20,14 @@ echo "mixek" > skrillex.txt
 cat skrillex.txt
 cd ..
 cd ..
-cat dog.txt /test/animal/goat/remix/skrillex.txt > cat.txt
+cat dog.txt > cat.txt
+echo -en "\n" >> cat.txt
+cat goat/remix/skrillex.txt >> cat.txt
 cat cat.txt
 cd fox
-cat /test/animal/goat/jokes.txt /test/animal/cat.txt > says.txt
+cat ../goat/jokes.txt > says.txt
+echo -en '\n' >> says.txt
+cat ../cat.txt >> says.txt
 cat says.txt
 chmod 444 says.txt
 ls -l
